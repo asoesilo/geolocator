@@ -8,11 +8,12 @@ Access user's geolocation information
 
 ## Example
 
-> angular.module('example', ['aGeolocator'])
-> .controller('controller', ['Geolocator', function(Geolocator) {
->   Geolocator.getIPLocation()
->   .then(function(location) {
->     console.log('location', location);
->   });
-> });
-> 
+```
+ angular.module('example', ['aGeolocator'])
+ .controller('controller', ['Geolocator', function(Geolocator) {
+   Geolocator.getIPLocation()
+   .then(function(location) {
+     console.log('location', location);
+   });
+ });
+``` 
