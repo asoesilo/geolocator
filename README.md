@@ -1,3 +1,3 @@
-# angular-progress-button
+# Geolocator
 
 Access user's geolocation information
