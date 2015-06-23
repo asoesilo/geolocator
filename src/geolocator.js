@@ -1,9 +1,9 @@
 angular.module('aGeolocator', [])
   .factory('Geolocator', ['$http', '$q', function($http, $q){
-    GEOIP_URL = "https://www.telize.com/geoip"
+    var GEOIP_URL = "https://www.telize.com/geoip";
 
-    _getIPLocation = function() {
-      $http.get(GEOIP_URL).then(function(res) {
+    var _getIPLocation = function() {
+      return $http.get(GEOIP_URL).then(function(res) {
         return res.data;
       }).catch(function(err){
         return $q.reject(err.data);
