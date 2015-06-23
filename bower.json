@@ -1,0 +1,32 @@
+{
+	"name": "aGeolocator",
+	"version": "0.0.1",
+	"homepage": "https://github.com/asoesilo/geolocator",
+	"authors": [
+		"Andre Soesilo <asoesilo84@gmail.com>"
+	],
+	"description": "Access user's geolocation information",
+	"main": [
+		"src/geolocator.js"
+	],
+	"keywords": [
+		"angular",
+		"angularjs",
+		"geolocation",
+		"geolocator"
+	],
+	"license": "BSD-2-Clause",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"/tmp/",
+		"bower_components",
+		"test",
+		"/karma.conf.js",
+		"/package.json"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/asoesilo/geolocator.git"
+	}
+}
