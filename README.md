@@ -1,5 +1,3 @@
-> This library currently doesn't work at the moment, because our dependent API has been shut down. I will update it soon.
-
 # Geolocator
 
 Access user's geolocation information
