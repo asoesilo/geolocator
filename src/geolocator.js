@@ -4,18 +4,16 @@ angular.module('aGeolocator', [])
 
     var _parseDate = function(data) {
       loc = data.loc.split(',');
-      lat = parseInt(loc[0]);
-      lng = parseInt(loc[1]);
+      lat = parseFloat(loc[0]);
+      lng = parseFloat(loc[1]);
       return {
         ip: data.ip,
         city: data.city,
         region: data.region,
         country: data.country,
         postal: data.postal,
-        coords: {
-          latitude: lat,
-          longitude: lng
-        }
+        latitude: lat,
+        longitude: lng
       };
     };
 
