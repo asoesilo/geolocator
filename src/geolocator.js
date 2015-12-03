@@ -1,6 +1,6 @@
 angular.module('aGeolocator', [])
   .factory('Geolocator', ['$http', '$q', function($http, $q){
-    var GEOIP_URL = "https://freegeoip.net/json";
+    var GEOIP_URL = "https://freegeoip.net/json/";
 
     var _parseDate = function(data) {
       return {
@@ -15,11 +15,11 @@ angular.module('aGeolocator', [])
     };
 
     var _getIPLocation = function(ipAddress) {
-      url = GEOIP_URL
+      url = GEOIP_URL;
       if(ipAddress != null && ipAddress != undefined && ipAddress.length > 0) {
-        url = url + '/' + ipAddress
+        url = url + ipAddress;
       }
-      url = url + '?callback=JSON_CALLBACK'
+      url = url + '?callback=JSON_CALLBACK';
       return $http.jsonp(url).then(function(res) {
         return _parseDate(res.data);
       }).catch(function(err){
