@@ -19,7 +19,8 @@ angular.module('aGeolocator', [])
       if(ipAddress != null && ipAddress != undefined && ipAddress.length > 0) {
         url = url + '/' + ipAddress
       }
-      return $http.get(url).then(function(res) {
+      url = url + '?callback=JSON_CALLBACK'
+      return $http.jsonp(url).then(function(res) {
         return _parseDate(res.data);
       }).catch(function(err){
         return $q.reject(err.data);
